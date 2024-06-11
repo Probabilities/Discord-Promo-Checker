@@ -1,0 +1,19 @@
+{
+  "name": "discord-promo-checker",
+  "version": "1.0.0",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "async-mutex": "^0.5.0",
+    "consola": "^3.2.3",
+    "enquirer": "^2.4.1",
+    "undici": "^6.18.2"
+  }
+}
