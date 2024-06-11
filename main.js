@@ -119,7 +119,7 @@ consola.info(`Loaded ${promos.length} promos`)
 const ProxyInputManager = new InputManager(proxies, { loop: true })
 const PromoInputManager = new InputManager(promos, { formatSlug: true, cleanStrings: true })
 
-const threeMonthPromoManager = new OutputManager('./output/3month.txt', { prefix: 'https://promos.discord.gg/' })
+const ThreeMonthPromoManager = new OutputManager('./output/3month.txt', { prefix: 'https://promos.discord.gg/' })
 const OneMonthPromoManager = new OutputManager('./output/1month.txt', { prefix: 'https://promos.discord.gg/' })
 const InvalidPromoManager = new OutputManager('./output/invalid.txt', { prefix: 'https://promos.discord.gg/' })
 const UsedPromoManager = new OutputManager('./output/used.txt', { prefix: 'https://promos.discord.gg/' })
@@ -192,7 +192,7 @@ const Thread = async(id) => {
 
         if(result?.uses != result?.max_uses) {
             const promoType = result?.promotion?.inbound_header_text?.includes('3 months') ? 3 : 1
-            const logType = promoType == 3 ? threeMonthPromoManager : OneMonthPromoManager
+            const logType = promoType == 3 ? ThreeMonthPromoManager : OneMonthPromoManager
             counters[`month${promoType}`] += 1
             consola.success(`[${id}] ${promoType} Month promo code: https://promos.discord.gg/${promo} - ${counters.total + 1}/${PromoInputManager.array.length}`)
             await logType.write(promo)
