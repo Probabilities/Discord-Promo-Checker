@@ -129,7 +129,8 @@ const getPromoResponse = (proxy, code) => new Promise(async(resolve) => {
     const requestTimeout = 5000
     const failTimeout = 2000
 
-    const agent = Utility.createProxyAgent(proxy)
+    if(proxy)
+        var agent = Utility.createProxyAgent(proxy)
 
     let fails = []
 
@@ -138,7 +139,7 @@ const getPromoResponse = (proxy, code) => new Promise(async(resolve) => {
             const req = await request(`https://discord.com/api/v9/entitlements/gift-codes/${code}`, {
                 headersTimeout: requestTimeout,
                 bodyTimeout: requestTimeout,
-                dispatcher: agent
+                ...agent && { dispatcher: agent },
             })
             
             try{
