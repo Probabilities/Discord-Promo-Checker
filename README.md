@@ -11,6 +11,10 @@
     A tool used to check discord promotion codes. Supports all link formats. Outputs the results into 4 text files; 3month, 1month, invalid and used. Threaded and very fast with proxy support.
 </div>
 
+> [!TIP]
+> I highly recommend using IPv6 proxies for this tool. I recommend [VoidProxies](https://shop.voidproxies.com) as they have unlimited bandwidth at no extra costs, they are also extremely fast.
+
+
 <!-- GETTING STARTED -->
 ## Getting Started
 ```
