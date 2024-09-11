@@ -12,7 +12,7 @@
 </div>
 
 > [!TIP]
-> I highly recommend using IPv6 proxies for this tool. I recommend [VoidProxies](https://shop.voidproxies.com) as they have unlimited bandwidth at no extra costs, they are also extremely fast.
+> I highly recommend using IPv6 proxies for this tool. I recommend [VoidProxies](https://voidproxies.com) as they have unlimited bandwidth at no extra costs, they are also extremely fast.
 
 
 <!-- GETTING STARTED -->
